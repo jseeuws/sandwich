@@ -34,6 +34,12 @@ if(isset($_POST['submit'])){
     $errors['ingredients'] = 'Ingredients must be a comma separated list <br />';
 }
 }
+
+if(array_filter($errors)){
+} else {
+    header('location: index.php');
+}
+
     }
 
 
@@ -46,7 +52,7 @@ if(isset($_POST['submit'])){
 <!doctype html>
 <html>
 
-
+<?php include('index.php'); ?>
 
 
 <section class="container grey-text">
